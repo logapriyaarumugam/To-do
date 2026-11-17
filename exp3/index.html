@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TaskNest - My To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <div>
+            <h1>My to-do list</h1>
+            <p>A little progress every day.</p>
+        </div>
+       
+    </header>
+
+    <div class="dashboard">
+        <div>
+            <h2 id="total">5</h2>
+            <p>My Tasks</p>
+        </div>
+        <div>
+            <h2 id="completed">0</h2>
+            <p>Completed</p>
+        </div>
+        <div>
+            <h2 id="pending">5</h2>
+            <p>Remaining</p>
+        </div>
+    </div>
+
+    <section class="add-section">
+        <h3>Add something to your day</h3>
+
+        <input type="text" id="taskInput"
+               placeholder="What needs to be done?">
+
+        <div class="form-row">
+            <input type="date" id="taskDate">
+
+            <select id="priority">
+                <option value="Low">Low Priority</option>
+                <option value="Medium">Medium Priority</option>
+                <option value="High">High Priority</option>
+            </select>
+        </div>
+
+        <button class="add-btn" onclick="addTask()">
+            + Add My Task
+        </button>
+    </section>
+
+    <section class="list-section">
+        <div class="list-heading">
+            <h3>Today's Checklist</h3>
+            <span>My daily goals ✨</span>
+        </div>
+
+        <div class="filters">
+            <button onclick="setFilter('all')">All</button>
+            <button onclick="setFilter('pending')">Pending</button>
+            <button onclick="setFilter('completed')">Completed</button>
+        </div>
+
+        <div id="taskList"></div>
+    </section>
+
+    <p class="footer">
+        Small steps make big differences 🌿
+    </p>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

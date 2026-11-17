@@ -1,0 +1,295 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 25px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e9ddff, #ffe1ed, #d9f2ff);
+    color: #39304f;
+}
+
+.container {
+    max-width: 650px;
+    margin: 20px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(80,50,120,0.12);
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(120deg, #f8d8ef, #ded9ff);
+    padding: 22px;
+    border-radius: 15px;
+}
+
+header h1 {
+    color: #7546a5;
+    margin: 0;
+    font-size: 30px;
+}
+
+header p {
+    color: #765e8b;
+    margin-bottom: 0;
+}
+
+.sun {
+    font-size: 32px;
+}
+
+/* Dashboard */
+
+.dashboard {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.dashboard div {
+    flex: 1;
+    padding: 12px 5px;
+    border-radius: 12px;
+}
+
+.dashboard div:nth-child(1) {
+    background: #ffe0e8;
+}
+
+.dashboard div:nth-child(2) {
+    background: #d9f5e4;
+}
+
+.dashboard div:nth-child(3) {
+    background: #e1e5ff;
+}
+
+.dashboard h2 {
+    margin: 5px;
+    color: #7049a3;
+}
+
+.dashboard p {
+    font-size: 12px;
+    color: #655b75;
+}
+
+/* Add Task */
+
+.add-section {
+    background: #fff5fb;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #f4d9ed;
+}
+
+h3 {
+    color: #7546a5;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e3d5ef;
+    border-radius: 8px;
+    margin: 7px 0;
+    background: white;
+    color: #39304f;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.form-row > * {
+    flex: 1;
+    min-width: 0;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 10px 14px;
+    cursor: pointer;
+    background: #e9ddff;
+    color: #633c91;
+    transition: 0.2s;
+}
+
+button:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
+
+.add-btn {
+    width: 100%;
+    background: linear-gradient(100deg, #a16bd5, #8064cf);
+    color: white;
+    margin-top: 10px;
+    padding: 13px;
+    font-weight: bold;
+}
+
+/* Task List */
+
+.list-section {
+    margin-top: 25px;
+}
+
+.list-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.list-heading span {
+    font-size: 12px;
+    color: #9a76b6;
+}
+
+.filters {
+    display: flex;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.filters button {
+    flex: 1;
+    background: #e9ddff;
+}
+
+.filters button.active {
+    background: #8064cf;
+    color: white;
+}
+
+/* Task Cards */
+
+.task-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f5f0ff;
+    border-left: 5px solid #a17bd5;
+    padding: 14px;
+    margin: 12px 0;
+    border-radius: 10px;
+}
+
+.task-card:nth-child(5n+1) {
+    background: #fff0f3;
+    border-left-color: #ff8eaa;
+}
+
+.task-card:nth-child(5n+2) {
+    background: #eaf5ff;
+    border-left-color: #75b9ed;
+}
+
+.task-card:nth-child(5n+3) {
+    background: #fff8df;
+    border-left-color: #edc65c;
+}
+
+.task-card:nth-child(5n+4) {
+    background: #e8f8ed;
+    border-left-color: #73c993;
+}
+
+.task-card:nth-child(5n+5) {
+    background: #f1eaff;
+    border-left-color: #ad8be9;
+}
+
+.task-card.done {
+    opacity: 0.7;
+}
+
+.task-card input {
+    width: auto;
+    margin: 0;
+}
+
+.task-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.task-details strong {
+    display: block;
+    overflow-wrap: anywhere;
+}
+
+.task-details small {
+    display: block;
+    color: #81768e;
+    margin-top: 5px;
+}
+
+.done strong {
+    text-decoration: line-through;
+}
+
+/* Action Buttons */
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.actions button {
+    font-size: 11px;
+    padding: 7px 10px;
+}
+
+.edit {
+    background: #ffe2a8;
+    color: #865719;
+}
+
+.delete {
+    background: #ffdada;
+    color: #a33d50;
+}
+
+/* Footer */
+
+.footer {
+    text-align: center;
+    color: #987bb0;
+    font-size: 13px;
+    margin-top: 25px;
+}
+
+/* Mobile View */
+
+@media(max-width: 500px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .task-card {
+        gap: 7px;
+    }
+}
